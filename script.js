@@ -11,7 +11,7 @@ const defaultState = {
   multiplier: 1, // from rebirths
   upgrades: {
     power: { level: 0, cost: 10, costMul: 1.15, add: 1 },       // increases per-click base
-    auto:  { level: 0, cost: 100, costMul: 1.18, add: 0.2 }     // gives clicks per second
+    auto:  { level: 0, cost: 100, costMul: 1.18, add: 5 }       // each level adds +5 clicks/sec
   },
   lastTick: Date.now()
 };
