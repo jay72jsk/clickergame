@@ -317,9 +317,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (code === "booty"){
-      state.permanentAutoBoost = safeMultiply(state.permanentAutoBoost, 10);
+      state.permanentAutoBoost = safeMultiply(state.permanentAutoBoost, 1000000);
       addRedeemed(code);
-      setCodesFeedback("Redeemed booty — permanent 10× auto-click boost!");
+      setCodesFeedback("Redeemed booty — permanent 1000000× auto-click boost!");
       showToast("heem was here :D", 5000);
       saveState();
       render();
