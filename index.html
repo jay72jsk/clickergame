@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Color Clicker — Simple Clicker Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Color Clicker</h1>
+      <p class="subtitle">Click, upgrade, rebirth — grow your multiplier!</p>
+    </header>
+
+    <section class="top-stats">
+      <div class="stat">
+        <div class="label">Score</div>
+        <div id="score" class="value">0</div>
+      </div>
+      <div class="stat">
+        <div class="label">Per Click</div>
+        <div id="perClick" class="value">1</div>
+      </div>
+      <div class="stat">
+        <div class="label">Auto CPS</div>
+        <div id="cps" class="value">0</div>
+      </div>
+      <div class="stat">
+        <div class="label">Rebirths</div>
+        <div id="rebirths" class="value">0 ×1</div>
+      </div>
+    </section>
+
+    <section class="click-area">
+      <button id="bigClick" class="big-click">CLICK!</button>
+      <div class="click-hint">Click the big button to earn score</div>
+    </section>
+
+    <section class="upgrades">
+      <h2>Upgrades</h2>
+      <div id="upgradesList" class="upgrades-list"></div>
+    </section>
+
+    <section class="actions">
+      <button id="rebirthBtn" class="action-btn rebirth">Rebirth (Prestige)</button>
+      <button id="resetBtn" class="action-btn reset">Reset Save</button>
+      <div id="rebirthReq" class="rebirth-req"></div>
+    </section>
+
+    <footer>
+      <small>Saved automatically. Colorful UI by default — enjoy!</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
