@@ -287,6 +287,18 @@ document.addEventListener("DOMContentLoaded", () => {
       setCodesFeedback("Enter a code.");
       return;
     }
+
+    // Special: allow RESETCODES to clear redeemed list even if previously used
+    if (code === "resetcodes") {
+      state.redeemedCodes = [];
+      saveState();
+      render();
+      setCodesFeedback("Redeemed RESETCODES — redeemed codes cleared. You can redeem them again.");
+      showToast("All codes have been reset. You can redeem codes again.", 3500);
+      console.log("Redeemed RESETCODES: cleared redeemedCodes.");
+      return;
+    }
+
     if (isCodeRedeemed(code)){
       setCodesFeedback("Code already redeemed.");
       showToast("Code already redeemed.", 2000);
@@ -317,9 +329,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (code === "booty"){
-      state.permanentAutoBoost = safeMultiply(state.permanentAutoBoost, 1000000);
+      // previously the multiplier was set very large; updated to the intended 10× permanent auto boost
+      state.permanentAutoBoost = safeMultiply(state.permanentAutoBoost, 10);
       addRedeemed(code);
-      setCodesFeedback("Redeemed booty — permanent 1000000× auto-click boost!");
+      setCodesFeedback("Redeemed booty — permanent 10× auto-click boost!");
       showToast("heem was here :D", 5000);
       saveState();
       render();
