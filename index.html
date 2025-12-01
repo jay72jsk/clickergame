@@ -33,7 +33,7 @@
     </section>
 
     <section class="click-area">
-      <button id="bigClick" class="big-click">CLICK!</button>
+      <button id="bigClick" class="big-click"><span>CLICK!</span></button>
       <div class="click-hint">Click the big button to earn score</div>
     </section>
 
@@ -43,15 +43,33 @@
     </section>
 
     <section class="actions">
+      <button id="codesToggle" class="action-btn">Codes</button>
       <button id="rebirthBtn" class="action-btn rebirth">Rebirth (Prestige)</button>
       <button id="resetBtn" class="action-btn reset">Reset Save</button>
       <div id="rebirthReq" class="rebirth-req"></div>
     </section>
 
+    <!-- Codes panel (hidden by default) -->
+    <section id="codesPanel" class="codes-panel hidden">
+      <h3>Enter Code</h3>
+      <div class="codes-row">
+        <input id="codeInput" type="text" placeholder="Enter code here" />
+        <button id="redeemBtn" class="buy-btn">Redeem</button>
+      </div>
+      <div id="codesFeedback" class="codes-feedback"></div>
+      <div class="redeemed-list">
+        <strong>Redeemed Codes:</strong>
+        <ul id="redeemedList"></ul>
+      </div>
+    </section>
+
     <footer>
-      <small>Saved automatically. Colorful UI by rxchhoffheem — enjoy!</small>
+      <small>Saved automatically. Colorful UI by default — enjoy!</small>
     </footer>
   </main>
+
+  <!-- Toast / temporary message -->
+  <div id="toastMessage" class="toast hidden"></div>
 
   <script src="script.js"></script>
 </body>
